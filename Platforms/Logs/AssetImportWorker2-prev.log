@@ -1,0 +1,566 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.9f1 (ea401c316338) revision 15351836'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'es' Physical Memory: 16204 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/drac1/OneDrive/Documentos/GitHub/VideogamePlatformWorkspace/Platforms
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+42289
+Successfully changed project path to: C:/Users/drac1/OneDrive/Documentos/GitHub/VideogamePlatformWorkspace/Platforms
+C:/Users/drac1/OneDrive/Documentos/GitHub/VideogamePlatformWorkspace/Platforms
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [21076] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 2186637448 [EditorId] 2186637448 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [21076] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 2186637448 [EditorId] 2186637448 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
+Refreshing native plugins compatible for Editor in 10.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.9f1 (ea401c316338)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/drac1/OneDrive/Documentos/GitHub/VideogamePlatformWorkspace/Platforms/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f15)
+    Vendor:   NVIDIA
+    VRAM:     5969 MB
+    Driver:   31.0.15.4633
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56528
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.010523 seconds.
+- Loaded All Assemblies, in  0.407 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 273 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.585 seconds
+Domain Reload Profiling: 990ms
+	BeginReloadAssembly (143ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (62ms)
+	LoadAllAssembliesAndSetupDomain (153ms)
+		LoadAssemblies (140ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (151ms)
+			TypeCache.Refresh (149ms)
+				TypeCache.ScanAssembly (135ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (585ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (531ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (389ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (89ms)
+			ProcessInitializeOnLoadMethodAttributes (48ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.590 seconds
+Refreshing native plugins compatible for Editor in 3.54 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.516 seconds
+Domain Reload Profiling: 1102ms
+	BeginReloadAssembly (139ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (20ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (363ms)
+		LoadAssemblies (282ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (163ms)
+			TypeCache.Refresh (146ms)
+				TypeCache.ScanAssembly (130ms)
+			ScanForSourceGeneratedMonoScriptInfo (12ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (516ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (359ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (22ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (56ms)
+			ProcessInitializeOnLoadAttributes (251ms)
+			ProcessInitializeOnLoadMethodAttributes (18ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 3.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 31 unused Assets / (56.3 KB). Loaded Objects now: 3546.
+Memory consumption went from 120.0 MB to 119.9 MB.
+Total: 3.269300 ms (FindLiveObjects: 0.242700 ms CreateObjectMapping: 0.197000 ms MarkObjects: 2.746300 ms  DeleteObjects: 0.082400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2309168.883200 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/RootMotion
+  artifactKey: Guid(bca860da6d60ce74890f9b009bfb3b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/RootMotion using Guid(bca860da6d60ce74890f9b009bfb3b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1282d8bcf89f05a551e5e9d187cf7807') in 0.004070 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.075920 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/RootMotion/JumpFull_Normal_RM_SwordAndShield.fbx
+  artifactKey: Guid(dd2792b75214ec24793124d449bacd3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/RootMotion/JumpFull_Normal_RM_SwordAndShield.fbx using Guid(dd2792b75214ec24793124d449bacd3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a20263493552f33e200bc43976b5c768') in 0.237306 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 111
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/RootMotion/MoveLFT_Battle_RM_SwordAndShield.fbx
+  artifactKey: Guid(0451bbf0d5f172a40ac47fdb6d799f2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/RootMotion/MoveLFT_Battle_RM_SwordAndShield.fbx using Guid(0451bbf0d5f172a40ac47fdb6d799f2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1696f8002b3f2a21e5ecfcd8d5630389') in 0.072016 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 111
+========================================================================
+Received Import Request.
+  Time since last request: 13.291353 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/InPlace
+  artifactKey: Guid(04072eb8216e6624cb504264603199b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/InPlace using Guid(04072eb8216e6624cb504264603199b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6947f8957a7f974758ab16a3bfff12ee') in 0.001158 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.165172 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/InPlace/JumpAir_Double_InPlace_SwordAndShield.fbx
+  artifactKey: Guid(5a1a6cd3b07227d4291a52440352f908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/InPlace/JumpAir_Double_InPlace_SwordAndShield.fbx using Guid(5a1a6cd3b07227d4291a52440352f908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '971c89083e8e470513009843d7e625e1') in 0.077507 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 111
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/InPlace/JumpStart_Normal_InPlace_SwordAndShield.fbx
+  artifactKey: Guid(c2b2e4c79d87c3045838cbc5935d8a98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/InPlace/JumpStart_Normal_InPlace_SwordAndShield.fbx using Guid(c2b2e4c79d87c3045838cbc5935d8a98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c78770711ac0c7f513f619d96613be36') in 0.111355 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 111
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/InPlace/MoveRGT_Battle_InPlace_SwordAndShield.fbx
+  artifactKey: Guid(f531fd2d5a6a8a440b5d450e029c4041) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/InPlace/MoveRGT_Battle_InPlace_SwordAndShield.fbx using Guid(f531fd2d5a6a8a440b5d450e029c4041) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aac6bfdecab401678fd46ce8968c8d2') in 0.101938 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 111
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/InPlace/SprintFWD_Battle_InPlace_SwordAndShield.fbx
+  artifactKey: Guid(5eee3d6dbfbcef04ab20b548575d7b9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/InPlace/SprintFWD_Battle_InPlace_SwordAndShield.fbx using Guid(5eee3d6dbfbcef04ab20b548575d7b9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9eb60c065819bb2fbee3a5110110565') in 0.074906 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 111
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/InPlace/MoveFWD_Normal_InPlace_SwordAndShield.fbx
+  artifactKey: Guid(0791e523b7f1b2740a3b1cde42b6aeac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animation/SwordAndShield/InPlace/MoveFWD_Normal_InPlace_SwordAndShield.fbx using Guid(0791e523b7f1b2740a3b1cde42b6aeac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf389e8f144f095984ee61704820ee1e') in 0.059694 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 111
+========================================================================
+Received Import Request.
+  Time since last request: 12.031982 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animator
+  artifactKey: Guid(babbdda514009f84dbf2496ace6a6f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animator using Guid(babbdda514009f84dbf2496ace6a6f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a90514c96228fa44aff4658b9df39654') in 0.001094 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.072231 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animator/AnimLayer.mask
+  artifactKey: Guid(acaf52b69aaad2042b776ec016c26e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animator/AnimLayer.mask using Guid(acaf52b69aaad2042b776ec016c26e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a23c124cced376d9126667b2ad70be8') in 0.001203 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 1.590332 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animator/AnimationLayer.controller
+  artifactKey: Guid(ad202f9dbc4f60c49a5f7d1d0546d1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animator/AnimationLayer.controller using Guid(ad202f9dbc4f60c49a5f7d1d0546d1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3da125facfc6f648eabae72aaf201da') in 0.003789 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 48.181684 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animator/RootMotion.controller
+  artifactKey: Guid(230b755b75de01e42872522beacd71ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animator/RootMotion.controller using Guid(230b755b75de01e42872522beacd71ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '858f3ce84e6e6c1eaf009723ba1559f6') in 0.002089 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 1.038463 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animator/SwordAndShieldStance.controller
+  artifactKey: Guid(2be64f57d7d213648aa9b2e5e8e0a39b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animator/SwordAndShieldStance.controller using Guid(2be64f57d7d213648aa9b2e5e8e0a39b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adb1f124ab1772a5aaf182ed4a27e20d') in 0.024855 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 72
+========================================================================
+Received Import Request.
+  Time since last request: 226.877032 seconds.
+  path: Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animator/New Animation.anim
+  artifactKey: Guid(06e9b3bd7e7945e46b9ef3beea2845f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Hero/RPG Tiny Hero Duo/Animator/New Animation.anim using Guid(06e9b3bd7e7945e46b9ef3beea2845f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e1c064bba06dfd597b42277a2eb3b09') in 0.001933 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 16.713931 seconds.
+  path: Assets/Animations
+  artifactKey: Guid(e5d1d64340453fc41b0f74ff0942ea53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations using Guid(e5d1d64340453fc41b0f74ff0942ea53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8166a3f56fe13e6d857a0f276c93d35') in 0.000655 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 7.755350 seconds.
+  path: Assets/Animations/Hero
+  artifactKey: Guid(7adf99178eea8204dba50d8a03e0d37f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Hero using Guid(7adf99178eea8204dba50d8a03e0d37f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '106bda5d3b73d10cd18f90932f90e158') in 0.000711 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 15.412998 seconds.
+  path: Assets/Animations/Hero/Movement.controller
+  artifactKey: Guid(17a2d8b409d19b545bc96b2f51c397e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Hero/Movement.controller using Guid(17a2d8b409d19b545bc96b2f51c397e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bf07079b1bf4eba46ae527b85d8ea2e') in 0.002057 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 388.342181 seconds.
+  path: Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Foliage/acacia_A.prefab
+  artifactKey: Guid(0e5b94df29f597247a3ebfcd4c1ba82c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Foliage/acacia_A.prefab using Guid(0e5b94df29f597247a3ebfcd4c1ba82c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57d0ef6ee78a65043413d30d172de8c0') in 0.029987 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.015174 seconds.
+  path: Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Foliage/acacia_D.prefab
+  artifactKey: Guid(e6d211ec530ecab468a403826c48f32b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Foliage/acacia_D.prefab using Guid(e6d211ec530ecab468a403826c48f32b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '745ca7238451666dc12dda6feea0dfbc') in 0.018676 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Prefab/DragonTerrorBringer/Albino.prefab
+  artifactKey: Guid(8e302007cba46d94b970c6a0955b9628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Prefab/DragonTerrorBringer/Albino.prefab using Guid(8e302007cba46d94b970c6a0955b9628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db9e1d7287ccc21d3db1796ffe9277bb') in 0.497646 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 238
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_A_04.prefab
+  artifactKey: Guid(6bad3189814631f4eadb33f5b936775b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_A_04.prefab using Guid(6bad3189814631f4eadb33f5b936775b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34f94d2ab65fec547be00a2c53b13f1d') in 0.014132 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonUsurper/FlyIdle.fbx
+  artifactKey: Guid(7508a417409ed134ea8cac8e87247637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonUsurper/FlyIdle.fbx using Guid(7508a417409ed134ea8cac8e87247637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9ac17b989cab6bd08ded8403df7b04b') in 0.029186 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 249
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonSoulEater/Idle.fbx
+  artifactKey: Guid(53822ae0b4a40a24b97e0cf0388e4248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonSoulEater/Idle.fbx using Guid(53822ae0b4a40a24b97e0cf0388e4248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8494e4504be59eabd2634e6c3d8c4c9a') in 0.033160 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 133
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonNightMare/idle02.fbx
+  artifactKey: Guid(9d21fa939f154f147ac659d23465c4ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonNightMare/idle02.fbx using Guid(9d21fa939f154f147ac659d23465c4ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c0261a5d1add03990decdcd318e1859') in 0.026427 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 155
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_C_02.prefab
+  artifactKey: Guid(1efeac7eddf55b14298667cc88cbcca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_C_02.prefab using Guid(1efeac7eddf55b14298667cc88cbcca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '271e4ece3533e785dc7da50a987db350') in 0.015000 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Texture/DragonTerrorBringer/Green/Ambient Occlusion Map from Mesh lambert1.png
+  artifactKey: Guid(f2e095f24f6d6d642a864e0d622f79c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Texture/DragonTerrorBringer/Green/Ambient Occlusion Map from Mesh lambert1.png using Guid(f2e095f24f6d6d642a864e0d622f79c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4763805d95b968c2faf3eee8b02394c') in 0.036522 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/ThirdParty/Pet/Fox/Animations/Fox_Sit2_Idle.fbx
+  artifactKey: Guid(a2e546d7d9c06c5438e2982ef4737ce3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Pet/Fox/Animations/Fox_Sit2_Idle.fbx using Guid(a2e546d7d9c06c5438e2982ef4737ce3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a28a86c29f9c987d1626fda66dedcc9') in 0.054767 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 90
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_A_03.prefab
+  artifactKey: Guid(a9dce04c3d5338b4db6bebeb49b686fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_A_03.prefab using Guid(a9dce04c3d5338b4db6bebeb49b686fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '191d461c450ab71087b22067d7bd27ee') in 0.015374 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonSoulEater/Fly Glide.fbx
+  artifactKey: Guid(28a39de94def6c84ca4b447fa78a3a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonSoulEater/Fly Glide.fbx using Guid(28a39de94def6c84ca4b447fa78a3a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15e5c4bf64138971db6971c29dcd0700') in 0.031061 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 133
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_B_02.prefab
+  artifactKey: Guid(56259db9e3bec1342a4b2fe6092aa94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_B_02.prefab using Guid(56259db9e3bec1342a4b2fe6092aa94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f526905fbcf97b56f2559685334f50f') in 0.016507 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Foliage/acacia_C.prefab
+  artifactKey: Guid(8ed094e18b702264aa6484d8a09f1630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Foliage/acacia_C.prefab using Guid(8ed094e18b702264aa6484d8a09f1630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd4d9f45a43049049ed586700832d869') in 0.016292 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonNightMare/idle01.fbx
+  artifactKey: Guid(e6a84557d6aca2f4daa1b608739267d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonNightMare/idle01.fbx using Guid(e6a84557d6aca2f4daa1b608739267d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59d2dabbf36bfd9503e9b51f13014984') in 0.028846 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 155
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Prefab/DragonUsurper/Albino.prefab
+  artifactKey: Guid(aeb4794909bc89d43b72ad784903e0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Prefab/DragonUsurper/Albino.prefab using Guid(aeb4794909bc89d43b72ad784903e0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54387610b02d8a10f2d119df8aafbf8a') in 0.242666 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 310
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonUsurper/idle02.fbx
+  artifactKey: Guid(df5d29c6a8c8f1c4caef2b4c1d0b073a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonUsurper/idle02.fbx using Guid(df5d29c6a8c8f1c4caef2b4c1d0b073a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10ffe35d1ccedfb0e5874f2bb06c26e5') in 0.032233 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 249
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_B_01.prefab
+  artifactKey: Guid(e8c108bf253ec63448338b75baf770d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_B_01.prefab using Guid(e8c108bf253ec63448338b75baf770d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a61bc2525958f38d9153cebf00098973') in 0.017151 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonTerrorBringer/idle01.fbx
+  artifactKey: Guid(2f381863b81afe445bb3bbd18f1e90cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonTerrorBringer/idle01.fbx using Guid(2f381863b81afe445bb3bbd18f1e90cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6950b1c7e107fac651cfd58529b9b043') in 0.031948 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 177
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Materials/DragonUsurper/AlbinoPBR.mat
+  artifactKey: Guid(acd197acde96c544b8d8fd85cc2e8b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Materials/DragonUsurper/AlbinoPBR.mat using Guid(acd197acde96c544b8d8fd85cc2e8b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dbb4af79713b5837929daac4af74321') in 0.037107 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Materials/DragonNightmare/AlbinoPBR.mat
+  artifactKey: Guid(8000a685f5b509b45b455c9ffd1f347f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Materials/DragonNightmare/AlbinoPBR.mat using Guid(8000a685f5b509b45b455c9ffd1f347f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1f7d92c2906dd613b833a4f84060213') in 0.033534 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_C_01.prefab
+  artifactKey: Guid(32abd7317f701f64abb29dc25c4a9c21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_C_01.prefab using Guid(32abd7317f701f64abb29dc25c4a9c21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16135bafb2c8bc3eeea5144196b7802f') in 0.016442 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/ThirdParty/Pet/Fox/Animations/Fox_Idle.fbx
+  artifactKey: Guid(09884bf878afb4549bea8fb4f77e5ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Pet/Fox/Animations/Fox_Idle.fbx using Guid(09884bf878afb4549bea8fb4f77e5ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '050b67214c46ddafe363a5010446442a') in 0.038311 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 90
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Foliage/acacia_B.prefab
+  artifactKey: Guid(51f739c1128a66649a9f21334e2d5f14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Foliage/acacia_B.prefab using Guid(51f739c1128a66649a9f21334e2d5f14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '413c54a5e19936b3d512c605963f6cfe') in 0.015722 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_C_03.prefab
+  artifactKey: Guid(0ee2da81ab2d5bf4da41381b38db238f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_C_03.prefab using Guid(0ee2da81ab2d5bf4da41381b38db238f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05bd30e651f26461c75cd0ad326f5c0f') in 0.016316 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonUsurper/FlyGlide.fbx
+  artifactKey: Guid(14d524dd6d57c094da8d73fee5077c6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonUsurper/FlyGlide.fbx using Guid(14d524dd6d57c094da8d73fee5077c6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddff3c7bd7a6ce61c0520257ce8e7585') in 0.030736 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 249
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonTerrorBringer/FlyIdle.fbx
+  artifactKey: Guid(fe8f656bdccb4074683e623a09c9728e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonTerrorBringer/FlyIdle.fbx using Guid(fe8f656bdccb4074683e623a09c9728e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cabc89f3418aef3ad466a59b915df2dd') in 0.030135 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 177
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonTerrorBringer/idle02.fbx
+  artifactKey: Guid(cbbe4ed6e6acf294e9df235ff6184874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Enemies/FourEvilDragonsPBR/Animations/DragonTerrorBringer/idle02.fbx using Guid(cbbe4ed6e6acf294e9df235ff6184874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a1a6bff9b161315a1dbfb23fa6468d') in 0.032042 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 177
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_B_03.prefab
+  artifactKey: Guid(82a11a4672840e14bb4f58eadc22aa8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Islands/Zololgo/FlatPoly Floating Islands/Prefabs/Other/bridge_B_03.prefab using Guid(82a11a4672840e14bb4f58eadc22aa8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6f6d5c0ae58981b6049e1085da8fd40') in 0.021463 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: La operación de E/S se anuló por una salida de subproceso o por una solicitud de aplicación.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
