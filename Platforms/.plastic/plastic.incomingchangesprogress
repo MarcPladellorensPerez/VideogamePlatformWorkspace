@@ -1,0 +1,36 @@
+[
+  {
+    "MountId": "56e62dd7-241f-41e9-8c6b-dd4ca4513e62",
+    "AncestorCsetIds": [
+      2
+    ],
+    "SourceCsetId": 3,
+    "DestinationCsetId": 2,
+    "FileConflicts": [
+      {
+        "Path": "/Assets/Animations/Hero/SwordAndShieldStance.controller",
+        "ItemId": 1633,
+        "ParentItemId": 1604,
+        "BaseRevId": 163,
+        "SourceRevId": 3252,
+        "DestinationRevId": 163
+      },
+      {
+        "Path": "/Assets/Scenes/SampleScene.unity",
+        "ItemId": 1607,
+        "ParentItemId": 1595,
+        "BaseRevId": 167,
+        "SourceRevId": 3253,
+        "DestinationRevId": 167
+      },
+      {
+        "Path": "/Assets/Scripts/Player.cs",
+        "ItemId": 1611,
+        "ParentItemId": 1598,
+        "BaseRevId": 172,
+        "SourceRevId": 3254,
+        "DestinationRevId": 172
+      }
+    ]
+  }
+]
