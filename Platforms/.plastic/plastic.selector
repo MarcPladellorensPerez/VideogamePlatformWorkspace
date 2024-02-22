@@ -1,4 +1,0 @@
-repository "Platforms@Drac10000@cloud"
-  path "/"
-    br "/main"
-    co "/main"
