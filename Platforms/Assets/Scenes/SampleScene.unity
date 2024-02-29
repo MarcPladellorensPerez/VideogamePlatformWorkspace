@@ -524,7 +524,8 @@ MonoBehaviour:
   player: {fileID: 190425518}
   moveSpeed: 2
   speedMult: 1
-  anim: {fileID: 0}
+  moveHorizontal: 0
+  moveVertical: 0
 --- !u!1 &205458313 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1619558185565566, guid: 1d9cc67243350f643b8c562ed0503c49, type: 3}
@@ -605,7 +606,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 221715620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3399fa75c7f2318479db181e549cce95, type: 3}
+  m_Script: {fileID: 11500000, guid: 823ae279c69a4fd4082c8cbfe3c28c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Healthbar: {fileID: 221715623}
@@ -1860,14 +1861,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1067406263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e03dd3a9d5f3240952225e8b49da34, type: 3}
+  m_Script: {fileID: 11500000, guid: 3091543959cb2fd4580f2534612e5c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementDistance: 3
-  speed: 2
-  movingLeft: 0
-  leftEdge: 0
-  rightEdge: 0
+  healthBar: {fileID: 1140922672}
+  MaxHp: 100
+  Hp: 0
 --- !u!54 &1067406270
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1904,12 +1903,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1067406263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1fe89646dab54a47bdeb5fae2a3b3fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 047705e9ae7d47a44a338179807f3ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 1140922672}
-  MaxHp: 100
-  Hp: 0
+  movementDistance: 3
+  speed: 0
+  movingLeft: 0
+  leftEdge: 0
+  rightEdge: 0
 --- !u!1 &1114074376 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1619558185565566, guid: 1d9cc67243350f643b8c562ed0503c49, type: 3}
@@ -2041,11 +2042,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1140922669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c297eb7271d2f54aaeb2103d8cabcf7, type: 3}
+  m_Script: {fileID: 11500000, guid: b0ae7523913d9084aadb38a6b2bcb286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Healthbar: {fileID: 1140922671}
-  Camera: {fileID: 0}
+  Camera: {fileID: 963194227}
 --- !u!1 &1388852460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,8 +2724,13 @@ PrefabInstance:
     - target: {fileID: 9036980633323257398, guid: 2dfbb63c9cdf7504faf4ff26b0581598, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 2be64f57d7d213648aa9b2e5e8e0a39b, type: 2}
-    m_RemovedComponents: []
+      objectReference: {fileID: 9100000, guid: 3801a27523c5ae24598fcdf8af8ce967, type: 2}
+    - target: {fileID: 9036980633323257398, guid: 2dfbb63c9cdf7504faf4ff26b0581598, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -1516549541276779220, guid: 2dfbb63c9cdf7504faf4ff26b0581598, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -3630,8 +3636,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 963194228}
-  - {fileID: 130726408}
   - {fileID: 705507995}
+  - {fileID: 130726408}
   - {fileID: 1496157137}
   - {fileID: 1495194190}
   - {fileID: 1067406267}
