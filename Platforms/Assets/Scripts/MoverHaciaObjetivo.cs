@@ -34,17 +34,21 @@ public class MoverHaciaObjetivo : MonoBehaviour
 
             // Mover el objeto hacia el objetivo
             transform.Translate(Vector3.forward * velocidad * Time.deltaTime);
-
-            // Si estás lo suficientemente cerca del objetivo, puedes detener el movimiento
-            if (Vector3.Distance(transform.position, objetivo.position) < 0.1f)
-            {
-                // Opcional: Puedes desactivar este GameObject una vez que haya llegado al objetivo
-                gameObject.SetActive(false);
-            }
         }
         else
         {
             Debug.LogWarning("Objetivo no asignado. Asigna un objetivo desde el inspector o asegúrate de que haya un objeto con el tag 'Tower' en la escena.");
+        }
+    }
+
+    // Método llamado cuando este objeto entra en colisión con otro objeto
+    private void OnTriggerEnter(Collider other)
+    {
+        // Verificar si el otro objeto tiene el tag "Tower"
+        if (other.CompareTag("Tower"))
+        {
+            // Destruir este GameObject
+            Destroy(gameObject);
         }
     }
 }

@@ -19,6 +19,10 @@ public class TowerController : MonoBehaviour
         {
             // Reducir la salud de la torre cuando un enemigo colisiona con ella
             healthBar.ReduceHealth(5);
+        } else if (other.CompareTag("Boss"))
+        {
+            // Reducir la salud de la torre cuando un enemigo colisiona con ella
+            healthBar.ReduceHealth(25);
         }
     }
 }
