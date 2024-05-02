@@ -20,7 +20,10 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Hp <= 0)
+        {
+            Destroy(gameObject); // Destruye el objeto enemigo cuando la vida llega a 0 o menos
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,7 +32,7 @@ public class EnemyHealth : MonoBehaviour
         {
             Hp -= 10;
             healthBar.setHealth(Hp);
-            Debug.Log("Vida de l'enemic: " + Hp + "/" + MaxHp);
+            Debug.Log("Vida del enemigo: " + Hp + "/" + MaxHp);
         }
     }
 }
