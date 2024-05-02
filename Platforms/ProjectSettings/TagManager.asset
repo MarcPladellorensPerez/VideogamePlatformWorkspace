@@ -13,6 +13,9 @@ TagManager:
   - Runner
   - Slime
   - Tank
+  - GoldCoin
+  - SilverCoin
+  - BronzeCoin
   layers:
   - Default
   - TransparentFX

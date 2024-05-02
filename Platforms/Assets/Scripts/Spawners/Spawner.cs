@@ -7,11 +7,19 @@ public class Spawner : MonoBehaviour
     public float spawnInterval = 3f; // Intervalo de tiempo entre generaciones de monstruos
     public Vector3 spawnRange; // El rango dentro del cual quieres generar los monstruos
 
+    public Transform container; // Referencia al objeto contenedor donde se guardarán los prefabs spawnizados
+
     float timer;
 
     void Start()
     {
         timer = spawnInterval;
+
+        // Crear un objeto vacío como contenedor si no se ha asignado ninguno
+        if (container == null)
+        {
+            container = new GameObject("MonsterContainer").transform;
+        }
     }
 
     void Update()
@@ -43,6 +51,9 @@ public class Spawner : MonoBehaviour
         );
 
         // Instancia el prefab de monstruo en la posición aleatoria
-        Instantiate(selectedMonsterPrefab, spawnPosition, Quaternion.identity);
+        GameObject spawnedMonster = Instantiate(selectedMonsterPrefab, spawnPosition, Quaternion.identity);
+
+        // Asignar el objeto contenedor como padre del monstruo spawnizado
+        spawnedMonster.transform.SetParent(container);
     }
 }
