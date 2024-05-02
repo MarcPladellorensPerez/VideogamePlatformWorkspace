@@ -16,6 +16,7 @@ TagManager:
   - GoldCoin
   - SilverCoin
   - BronzeCoin
+  - CoinContainer
   layers:
   - Default
   - TransparentFX

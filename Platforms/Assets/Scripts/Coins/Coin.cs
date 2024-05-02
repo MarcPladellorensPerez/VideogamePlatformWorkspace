@@ -13,7 +13,7 @@ public class Coin : MonoBehaviour
     public void Collect()
     {
         collected = true;
-        gameObject.SetActive(false);
+        Destroy(gameObject); // Destruye el objeto
     }
 
     public int GetCoinValue()

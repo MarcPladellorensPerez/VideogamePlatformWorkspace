@@ -632,6 +632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 2
+  puntosDeCamino: []
 --- !u!65 &8972813547765735479
 BoxCollider:
   m_ObjectHideFlags: 0

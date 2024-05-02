@@ -3,27 +3,22 @@ using UnityEngine;
 public class MoverHaciaObjetivo : MonoBehaviour
 {
     public float velocidad = 5f; // Velocidad de movimiento
-    private Transform objetivo; // El objeto al que quieres moverte
+    private Transform[] puntosDeCamino; // Array de puntos de camino
+    private int indicePuntoActual = 0; // Índice del punto de camino actual
 
-    void Start()
+    void Update()
     {
-        // Buscar el objeto con el tag "Tower" al inicio
-        objetivo = GameObject.FindGameObjectWithTag("Tower").transform;
-
-        // Verificar si se encontró el objetivo
-        if (objetivo == null)
+        if (puntosDeCamino == null || puntosDeCamino.Length == 0)
         {
-            Debug.LogWarning("No se encontró ningún objeto con el tag 'Tower'.");
+            Debug.LogWarning("No se han asignado puntos de camino.");
+            return;
         }
-    }
 
-    private void Update()
-    {
-        // Verificar si se ha encontrado un objetivo
-        if (objetivo != null)
+        // Si no hemos alcanzado el último punto de camino
+        if (indicePuntoActual < puntosDeCamino.Length)
         {
-            // Calcular la dirección hacia el objetivo
-            Vector3 direccion = objetivo.position - transform.position;
+            // Obtener la dirección hacia el punto de camino actual
+            Vector3 direccion = puntosDeCamino[indicePuntoActual].position - transform.position;
             direccion.Normalize();
 
             // Rotar hacia la dirección del movimiento
@@ -32,8 +27,14 @@ public class MoverHaciaObjetivo : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(direccion);
             }
 
-            // Mover el objeto hacia el objetivo
+            // Mover el objeto hacia el punto de camino actual
             transform.Translate(Vector3.forward * velocidad * Time.deltaTime);
+
+            // Si estamos lo suficientemente cerca del punto de camino actual, avanzar al siguiente punto
+            if (Vector3.Distance(transform.position, puntosDeCamino[indicePuntoActual].position) < 0.1f)
+            {
+                indicePuntoActual++;
+            }
         }
         else
         {
@@ -50,5 +51,11 @@ public class MoverHaciaObjetivo : MonoBehaviour
             // Destruir este GameObject
             Destroy(gameObject);
         }
+    }
+
+    // Método para establecer los puntos de camino
+    public void SetPuntosDeCamino(Transform[] puntos)
+    {
+        puntosDeCamino = puntos;
     }
 }

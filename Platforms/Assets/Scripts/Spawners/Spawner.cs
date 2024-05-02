@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour
     public List<GameObject> monsterPrefabs = new List<GameObject>(); // Lista de prefabs de monstruos
     public float spawnInterval = 3f; // Intervalo de tiempo entre generaciones de monstruos
     public Vector3 spawnRange; // El rango dentro del cual quieres generar los monstruos
+    public Transform[] puntosDeCamino; // Puntos de camino para los monstruos
 
     public Transform container; // Referencia al objeto contenedor donde se guardarán los prefabs spawnizados
 
@@ -55,5 +56,17 @@ public class Spawner : MonoBehaviour
 
         // Asignar el objeto contenedor como padre del monstruo spawnizado
         spawnedMonster.transform.SetParent(container);
+
+        // Obtener el componente MoverHaciaObjetivo del prefab spawnizado
+        MoverHaciaObjetivo moverHaciaObjetivo = spawnedMonster.GetComponent<MoverHaciaObjetivo>();
+        if (moverHaciaObjetivo != null)
+        {
+            // Establecer los puntos de camino en el componente MoverHaciaObjetivo
+            moverHaciaObjetivo.SetPuntosDeCamino(puntosDeCamino);
+        }
+        else
+        {
+            Debug.LogWarning("El prefab de monstruo no tiene el componente MoverHaciaObjetivo.");
+        }
     }
 }
