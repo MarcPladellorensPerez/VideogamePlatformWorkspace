@@ -2736,7 +2736,7 @@ GameObject:
   - component: {fileID: 2519797099651940310}
   m_Layer: 0
   m_Name: Purple
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2841,7 +2841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2153646795973254498}
-  MaxHp: 25
+  MaxHp: 40
   Hp: 0
 --- !u!114 &2519797099651940310
 MonoBehaviour:

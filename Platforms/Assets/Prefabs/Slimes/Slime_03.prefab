@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 8237563495840998044}
   m_Layer: 0
   m_Name: Slime_03
-  m_TagString: Enemy
+  m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 5198613138296763120}
-  MaxHp: 100
+  MaxHp: 20
   Hp: 0
 --- !u!114 &8237563495840998044
 MonoBehaviour:

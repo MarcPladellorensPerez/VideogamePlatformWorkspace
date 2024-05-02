@@ -10,6 +10,9 @@ TagManager:
   - Tower
   - TowerHealthBar
   - Boss
+  - Runner
+  - Slime
+  - Tank
   layers:
   - Default
   - TransparentFX

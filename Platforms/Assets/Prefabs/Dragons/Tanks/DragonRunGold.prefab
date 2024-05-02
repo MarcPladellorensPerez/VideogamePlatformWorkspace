@@ -442,11 +442,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100070, guid: 5f9b47d1228458148ac9b6e86d151862, type: 3}
       propertyPath: m_Name
-      value: run
+      value: DragonRunGold
       objectReference: {fileID: 0}
     - target: {fileID: 100070, guid: 5f9b47d1228458148ac9b6e86d151862, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Tank
       objectReference: {fileID: 0}
     - target: {fileID: 400070, guid: 5f9b47d1228458148ac9b6e86d151862, type: 3}
       propertyPath: m_LocalPosition.x
@@ -586,7 +586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6235806923772682144}
-  MaxHp: 100
+  MaxHp: 75
   Hp: 0
 --- !u!114 &8746714490194811244
 MonoBehaviour:

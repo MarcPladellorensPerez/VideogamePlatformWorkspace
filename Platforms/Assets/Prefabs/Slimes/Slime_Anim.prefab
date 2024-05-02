@@ -486,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eb340672e17c0af4089e561b61cdc548, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Slime
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: eb340672e17c0af4089e561b61cdc548, type: 3}
       propertyPath: m_Controller
@@ -591,7 +591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 4099571666619651612}
-  MaxHp: 100
+  MaxHp: 20
   Hp: 0
 --- !u!4 &807290072118919784 stripped
 Transform:

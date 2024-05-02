@@ -667,7 +667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1692971953722781234}
-  MaxHp: 100
+  MaxHp: 150
   Hp: 0
 --- !u!114 &7674612795713591431
 MonoBehaviour:

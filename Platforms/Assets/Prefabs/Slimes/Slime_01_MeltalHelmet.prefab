@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 684889389953984070}
   m_Layer: 0
   m_Name: Slime_01_MeltalHelmet
-  m_TagString: Enemy
+  m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -737,7 +737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 4955832411988532144}
-  MaxHp: 100
+  MaxHp: 20
   Hp: 0
 --- !u!114 &684889389953984070
 MonoBehaviour:

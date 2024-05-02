@@ -15,7 +15,7 @@ public class TowerController : MonoBehaviour
     // Método para manejar la colisión con enemigos
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Tank"))
         {
             // Reducir la salud de la torre cuando un enemigo colisiona con ella
             healthBar.ReduceHealth(5);
@@ -23,6 +23,14 @@ public class TowerController : MonoBehaviour
         {
             // Reducir la salud de la torre cuando un enemigo colisiona con ella
             healthBar.ReduceHealth(25);
+        } else if (other.CompareTag("Runner"))
+        {
+            // Reducir la salud de la torre cuando un enemigo colisiona con ella
+            healthBar.ReduceHealth(3);
+        } else if (other.CompareTag("Slime"))
+        {
+            // Reducir la salud de la torre cuando un enemigo colisiona con ella
+            healthBar.ReduceHealth(1);
         }
     }
 }
