@@ -92,7 +92,7 @@ public class TurretAI : MonoBehaviour {
 
         for (int i = 0; i < colls.Length; i++)
         {
-            if (colls[i].tag == "Player")
+            if (colls[i].tag == "Slime" || colls[i].tag == "Boss" || colls[i].tag == "Runner" || colls[i].tag == "Tank")
             {
                 float dist = Vector3.Distance(transform.position, colls[i].transform.position);
                 if (dist < distAway)

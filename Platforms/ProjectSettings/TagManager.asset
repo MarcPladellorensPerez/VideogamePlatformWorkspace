@@ -17,6 +17,8 @@ TagManager:
   - SilverCoin
   - BronzeCoin
   - CoinContainer
+  - Bullet
+  - Missile
   layers:
   - Default
   - TransparentFX
