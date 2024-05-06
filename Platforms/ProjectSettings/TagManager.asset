@@ -19,6 +19,7 @@ TagManager:
   - CoinContainer
   - Bullet
   - Missile
+  - Shop
   layers:
   - Default
   - TransparentFX
