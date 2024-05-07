@@ -35,17 +35,14 @@ public class EnemyHealth : MonoBehaviour
         {
             Hp -= 10;
             healthBar.setHealth(Hp);
-            Debug.Log("Vida del enemigo: " + Hp + "/" + MaxHp);
         } else if (other.gameObject.CompareTag("Bullet"))
         {
             Hp -= 2;
             healthBar.setHealth(Hp);
-            Debug.Log("Vida del enemigo: " + Hp + "/" + MaxHp);
         }else if (other.gameObject.CompareTag("Missile"))
         {
             Hp -= 5;
             healthBar.setHealth(Hp);
-            Debug.Log("Vida del enemigo: " + Hp + "/" + MaxHp);
         }
     }
 

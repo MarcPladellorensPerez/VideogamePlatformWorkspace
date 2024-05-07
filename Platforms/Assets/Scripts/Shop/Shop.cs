@@ -1,13 +1,80 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class BloqueHUD : MonoBehaviour
+public class Shop : MonoBehaviour
 {
     public Camera camaraJugador; // Referencia a la cámara del jugador
     public GameObject hudBloque; // El HUD que quieres mostrar/ocultar
+    public GameObject SingleTurret; // El objeto adicional para la tecla E
+    public GameObject DoubleTurret; // El objeto adicional para la tecla Q
+    public TextMeshProUGUI mensajeTextMeshE; // TextMeshPro para el mensaje de error con la tecla E
+    public TextMeshProUGUI mensajeTextMeshQ; // TextMeshPro para el mensaje de error con la tecla Q
+    public KeyCode teclaDesactivarE = KeyCode.E; // Tecla para desactivar el HUD permanentemente con la tecla E
+    public KeyCode teclaDesactivarQ = KeyCode.Q; // Tecla para desactivar el HUD permanentemente con la tecla Q
     public float alturaDesplazamiento = 1.5f; // Altura de desplazamiento del rayo desde la cámara
+    public Color colorRojoParpadeante = Color.red; // Color rojo para el parpadeo
+    public int parpadeos = 2; // Cantidad de veces que parpadeará el mensaje
+
+    private bool desactivadoPermanentemente = false; // Indica si el HUD se ha desactivado permanentemente
+    private Player playerScript; // Referencia al script del jugador
+
+    void Start()
+    {
+        // Obtener la referencia al script del jugador
+        playerScript = FindObjectOfType<Player>();
+    }
 
     void Update()
     {
+        // Si alguna de las torretas está activa, no mostrar el HUD
+        if (SingleTurret.activeSelf || DoubleTurret.activeSelf)
+        {
+            hudBloque.SetActive(false);
+            return;
+        }
+
+        // Verificar si se ha presionado la tecla para desactivar permanentemente el HUD con la tecla E
+        if (Input.GetKeyDown(teclaDesactivarE) && hudBloque.activeSelf)
+        {
+            if (playerScript != null && playerScript.totalCoinsCollected >= 10)
+            {
+                Debug.Log("Activando la SingleTurret.");
+                // Restar las monedas necesarias
+                playerScript.totalCoinsCollected -= 10;
+                // Activar la SingleTurret
+                SingleTurret.SetActive(true);
+                Debug.Log("Se ha activado la SingleTurret.");
+            }
+            else
+            {
+                StartCoroutine(ParpadearMensajeRojo(mensajeTextMeshE));
+            }
+        }
+
+        // Verificar si se ha presionado la tecla para desactivar permanentemente el HUD con la tecla Q
+        if (Input.GetKeyDown(teclaDesactivarQ) && hudBloque.activeSelf)
+        {
+            if (playerScript != null && playerScript.totalCoinsCollected >= 40)
+            {
+                Debug.Log("Activando la DoubleTurret.");
+                // Restar las monedas necesarias
+                playerScript.totalCoinsCollected -= 40;
+                // Activar la DoubleTurret
+                DoubleTurret.SetActive(true);
+                Debug.Log("Se ha activado la DoubleTurret.");
+            }
+            else
+            {
+                StartCoroutine(ParpadearMensajeRojo(mensajeTextMeshQ));
+            }
+        }
+
+        // Si el HUD está desactivado permanentemente, no realizar más comprobaciones
+        if (desactivadoPermanentemente)
+            return;
+
         // Obtener la posición de origen del rayo ligeramente por encima de la cámara del jugador
         Vector3 posicionOrigen = camaraJugador.transform.position + camaraJugador.transform.up * alturaDesplazamiento;
 
@@ -26,8 +93,11 @@ public class BloqueHUD : MonoBehaviour
             if (hit.collider.gameObject == gameObject)
             {
                 Debug.Log("La cámara del jugador está mirando el bloque.");
-                // Mostrar el HUD del bloque si está mirando hacia él
-                hudBloque.SetActive(true);
+                // Mostrar el HUD del bloque si está mirando hacia él y no está desactivado permanentemente
+                if (!desactivadoPermanentemente)
+                {
+                    hudBloque.SetActive(true);
+                }
             }
             else
             {
@@ -39,6 +109,22 @@ public class BloqueHUD : MonoBehaviour
         {
             // Si el rayo no intersecta con ningún objeto, ocultar el HUD del bloque
             hudBloque.SetActive(false);
+        }
+    }
+
+    IEnumerator ParpadearMensajeRojo(TextMeshProUGUI mensajeTextMesh)
+    {
+        // Ciclo para el parpadeo
+        for (int i = 0; i < parpadeos; i++)
+        {
+            // Cambiar el color del mensaje a rojo
+            mensajeTextMesh.color = colorRojoParpadeante;
+            // Esperar un momento corto
+            yield return new WaitForSeconds(0.1f);
+            // Cambiar el color del mensaje a blanco
+            mensajeTextMesh.color = Color.white;
+            // Esperar otro momento corto
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }
