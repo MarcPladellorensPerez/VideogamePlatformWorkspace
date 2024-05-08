@@ -40,12 +40,14 @@ public class Shop : MonoBehaviour
         {
             if (playerScript != null && playerScript.totalCoinsCollected >= 10)
             {
-                Debug.Log("Activando la SingleTurret.");
                 // Restar las monedas necesarias
-                playerScript.totalCoinsCollected -= 10;
-                // Activar la SingleTurret
-                SingleTurret.SetActive(true);
-                Debug.Log("Se ha activado la SingleTurret.");
+                if (playerScript.totalCoinsCollected >= 10) {
+                    playerScript.totalCoinsCollected -= 10;
+                    // Actualizar el contador de coins en el HUD del jugador
+                    playerScript.UpdateCoinCounter();
+                    // Activar la SingleTurret
+                    SingleTurret.SetActive(true);
+                }
             }
             else
             {
@@ -58,12 +60,14 @@ public class Shop : MonoBehaviour
         {
             if (playerScript != null && playerScript.totalCoinsCollected >= 40)
             {
-                Debug.Log("Activando la DoubleTurret.");
                 // Restar las monedas necesarias
-                playerScript.totalCoinsCollected -= 40;
-                // Activar la DoubleTurret
-                DoubleTurret.SetActive(true);
-                Debug.Log("Se ha activado la DoubleTurret.");
+                if (playerScript.totalCoinsCollected >= 40) {
+                    playerScript.totalCoinsCollected -= 40;
+                    // Actualizar el contador de coins en el HUD del jugador
+                    playerScript.UpdateCoinCounter();
+                    // Activar la DoubleTurret
+                    DoubleTurret.SetActive(true);
+                }
             }
             else
             {
@@ -92,7 +96,6 @@ public class Shop : MonoBehaviour
             // Verificar si el objeto intersectado es el bloque
             if (hit.collider.gameObject == gameObject)
             {
-                Debug.Log("La cámara del jugador está mirando el bloque.");
                 // Mostrar el HUD del bloque si está mirando hacia él y no está desactivado permanentemente
                 if (!desactivadoPermanentemente)
                 {

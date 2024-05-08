@@ -28,7 +28,7 @@ public class TowerHealthBar : MonoBehaviour
     public void Update()
     {
         // Esto es solo para probar la reducción de vida manualmente
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             ReduceHealth(5);
         }

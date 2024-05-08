@@ -11,15 +11,12 @@ public class Player : MonoBehaviour
     public int moveHorizontal;
     public int moveVertical;
     public TextMeshProUGUI coinCounter; 
-    public GameObject SingleTurret; // Referencia a la SingleTurret
-    public GameObject DoubleTurret; // Referencia a la DoubleTurret
 
     private Animator anim;
     public int totalCoinsCollected = 0;
-    private bool singleTurretActivated = false; // Bandera para indicar si la SingleTurret se ha activado
-    private bool doubleTurretActivated = false; // Bandera para indicar si la DoubleTurret se ha activado
 
     private Shop ShopScript; // Referencia al script Shop
+    private Fox FoxScript; // Referencia al script FoxHUD
 
     void Awake()
     {
@@ -30,6 +27,8 @@ public class Player : MonoBehaviour
     {
         // Obtener la referencia al script Shop
         ShopScript = FindObjectOfType<Shop>();
+        // Obtener la referencia al script FoxHUD
+        FoxScript = FindObjectOfType<Fox>();
     }
 
     void Update()
@@ -40,7 +39,10 @@ public class Player : MonoBehaviour
         Vector3 moveDirection = new Vector3(moveHorizontal, 0.0f, moveVertical);
         player.Translate(moveDirection * Time.deltaTime * moveSpeed * speedMult);
 
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
+        // Verificar si el jugador puede correr al esprintar
+        bool puedeCorrer = FoxScript == null || FoxScript.objetoNuevo.activeSelf;
+
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && puedeCorrer)
         {
             moveVertical = 2;
         }
@@ -74,40 +76,6 @@ public class Player : MonoBehaviour
         {
             anim.SetInteger("Attack", anim.GetInteger("Attack") + 1);
         }
-
-        // Verificar si se ha presionado la tecla para activar la SingleTurret y si el jugador tiene suficientes monedas y la SingleTurret no se ha activado previamente ni la DoubleTurret está activada
-        if (Input.GetKeyDown(KeyCode.E) && totalCoinsCollected >= 10 && !singleTurretActivated && !doubleTurretActivated)
-        {
-            Debug.Log("Activando la SingleTurret.");
-            // Restar las monedas necesarias
-            totalCoinsCollected -= 10;
-            UpdateCoinCounter();
-            // Activar la SingleTurret
-            SingleTurret.SetActive(true);
-            singleTurretActivated = true; // Marcar la SingleTurret como activada
-            // Desactivar el HUD en el Shop
-            if (ShopScript != null)
-            {
-                ShopScript.hudBloque.SetActive(false);
-            }
-        }
-
-        // Verificar si se ha presionado la tecla para activar la DoubleTurret y si el jugador tiene suficientes monedas y la DoubleTurret no se ha activado previamente ni la SingleTurret está activada
-        if (Input.GetKeyDown(KeyCode.Q) && totalCoinsCollected >= 40 && !doubleTurretActivated && !singleTurretActivated)
-        {
-            Debug.Log("Activando la DoubleTurret.");
-            // Restar las monedas necesarias
-            totalCoinsCollected -= 40;
-            UpdateCoinCounter();
-            // Activar la DoubleTurret
-            DoubleTurret.SetActive(true);
-            doubleTurretActivated = true; // Marcar la DoubleTurret como activada
-            // Desactivar el HUD en el Shop
-            if (ShopScript != null)
-            {
-                ShopScript.hudBloque.SetActive(false);
-            }
-        }
     }
 
     // Método para recolectar monedas
@@ -126,7 +94,7 @@ public class Player : MonoBehaviour
     }
 
     // Método para actualizar el contador de monedas en el HUD
-    private void UpdateCoinCounter()
+    public void UpdateCoinCounter()
     {
         coinCounter.text = "Coins: " + totalCoinsCollected;
     }
