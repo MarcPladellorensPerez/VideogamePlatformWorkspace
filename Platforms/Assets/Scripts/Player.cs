@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
 {
     public Transform player; // Player object (make sure to assign it in the Inspector)
     public float moveSpeed = 1f;
-    public int speedMult = 1;
     public int moveHorizontal;
     public int moveVertical;
 
@@ -24,7 +23,7 @@ public class Player : MonoBehaviour
         anim.SetFloat("VelX", moveHorizontal);
 
         Vector3 moveDirection = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        player.Translate(moveDirection * Time.deltaTime * moveSpeed * speedMult);
+        player.Translate(moveDirection * Time.deltaTime * moveSpeed);
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
         {
@@ -58,7 +57,11 @@ public class Player : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            anim.SetInteger("Attack", anim.GetInteger("Attack") + 1);
+            if (moveVertical <= 1)
+            {
+                anim.SetInteger("AttackNum", Random.Range(1,4));
+                anim.SetTrigger("Attack");
+            }
         }
     }
 }
