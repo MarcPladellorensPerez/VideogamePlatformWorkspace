@@ -16,9 +16,12 @@ public class Shop : MonoBehaviour
     public float alturaDesplazamiento = 1.5f; // Altura de desplazamiento del rayo desde la cámara
     public Color colorRojoParpadeante = Color.red; // Color rojo para el parpadeo
     public int parpadeos = 2; // Cantidad de veces que parpadeará el mensaje
+    public Player playerScript; // Referencia al script del jugador
+    public AudioSource audioSource; // Referencia al componente AudioSource
+    public AudioClip compraSound; // Sonido de compra
+    public AudioClip sinMonedasSound; // Sonido de falta de monedas
 
     private bool desactivadoPermanentemente = false; // Indica si el HUD se ha desactivado permanentemente
-    private Player playerScript; // Referencia al script del jugador
 
     void Start()
     {
@@ -40,18 +43,27 @@ public class Shop : MonoBehaviour
         {
             if (playerScript != null && playerScript.totalCoinsCollected >= 10)
             {
-                // Restar las monedas necesarias
-                if (playerScript.totalCoinsCollected >= 10) {
-                    playerScript.totalCoinsCollected -= 10;
-                    // Actualizar el contador de coins en el HUD del jugador
-                    playerScript.UpdateCoinCounter();
-                    // Activar la SingleTurret
-                    SingleTurret.SetActive(true);
+                Debug.Log("Activando la SingleTurret.");
+                // Reproducir el sonido de compra
+                if (audioSource != null && compraSound != null)
+                {
+                    audioSource.PlayOneShot(compraSound);
                 }
+                // Restar las monedas necesarias
+                playerScript.totalCoinsCollected -= 10;
+                playerScript.UpdateCoinCounter(); // Actualizar el contador de monedas del jugador
+                // Activar la SingleTurret
+                SingleTurret.SetActive(true);
+                Debug.Log("Se ha activado la SingleTurret.");
             }
             else
             {
                 StartCoroutine(ParpadearMensajeRojo(mensajeTextMeshE));
+                // Reproducir el sonido de falta de monedas
+                if (audioSource != null && sinMonedasSound != null)
+                {
+                    audioSource.PlayOneShot(sinMonedasSound);
+                }
             }
         }
 
@@ -60,18 +72,27 @@ public class Shop : MonoBehaviour
         {
             if (playerScript != null && playerScript.totalCoinsCollected >= 40)
             {
-                // Restar las monedas necesarias
-                if (playerScript.totalCoinsCollected >= 40) {
-                    playerScript.totalCoinsCollected -= 40;
-                    // Actualizar el contador de coins en el HUD del jugador
-                    playerScript.UpdateCoinCounter();
-                    // Activar la DoubleTurret
-                    DoubleTurret.SetActive(true);
+                Debug.Log("Activando la DoubleTurret.");
+                // Reproducir el sonido de compra
+                if (audioSource != null && compraSound != null)
+                {
+                    audioSource.PlayOneShot(compraSound);
                 }
+                // Restar las monedas necesarias
+                playerScript.totalCoinsCollected -= 40;
+                playerScript.UpdateCoinCounter(); // Actualizar el contador de monedas del jugador
+                // Activar la DoubleTurret
+                DoubleTurret.SetActive(true);
+                Debug.Log("Se ha activado la DoubleTurret.");
             }
             else
             {
                 StartCoroutine(ParpadearMensajeRojo(mensajeTextMeshQ));
+                // Reproducir el sonido de falta de monedas
+                if (audioSource != null && sinMonedasSound != null)
+                {
+                    audioSource.PlayOneShot(sinMonedasSound);
+                }
             }
         }
 
@@ -96,6 +117,7 @@ public class Shop : MonoBehaviour
             // Verificar si el objeto intersectado es el bloque
             if (hit.collider.gameObject == gameObject)
             {
+                Debug.Log("La cámara del jugador está mirando el bloque.");
                 // Mostrar el HUD del bloque si está mirando hacia él y no está desactivado permanentemente
                 if (!desactivadoPermanentemente)
                 {

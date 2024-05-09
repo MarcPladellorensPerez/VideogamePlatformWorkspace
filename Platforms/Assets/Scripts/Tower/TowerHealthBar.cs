@@ -15,6 +15,9 @@ public class TowerHealthBar : MonoBehaviour
 
     public TextMeshProUGUI HpText;
 
+    public AudioSource audioSource; // Componente AudioSource para reproducir el sonido
+    public AudioClip damageSound; // Sonido de daño a la torre
+
     public void Awake()
     {
         Healthbar.maxValue = MaxHp;
@@ -39,6 +42,12 @@ public class TowerHealthBar : MonoBehaviour
     {
         Hp -= amount;
         setHealth(Hp);
+
+        // Reproducir el sonido de daño si está configurado
+        if (audioSource != null && damageSound != null)
+        {
+            audioSource.PlayOneShot(damageSound);
+        }
     }
 
     // Método para establecer la salud y actualizar la barra de vida
@@ -65,15 +74,18 @@ public class TowerHealthBar : MonoBehaviour
         {
             // Reducir la salud de la torre cuando un enemigo colisiona con ella
             ReduceHealth(5);
-        }else if (other.CompareTag("Boss"))
+        }
+        else if (other.CompareTag("Boss"))
         {
             // Reducir la salud de la torre cuando un enemigo colisiona con ella
             ReduceHealth(25);
-        }else if (other.CompareTag("Runner"))
+        }
+        else if (other.CompareTag("Runner"))
         {
             // Reducir la salud de la torre cuando un enemigo colisiona con ella
             ReduceHealth(3);
-        }else if (other.CompareTag("Slime"))
+        }
+        else if (other.CompareTag("Slime"))
         {
             // Reducir la salud de la torre cuando un enemigo colisiona con ella
             ReduceHealth(1);

@@ -279,3 +279,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 3
+  collectSound: {fileID: 8300000, guid: 8c1a6992d9a9a6844b4522252e1c87a9, type: 3}

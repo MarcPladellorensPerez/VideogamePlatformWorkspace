@@ -15,6 +15,9 @@ public class Fox : MonoBehaviour
     public Color colorRojoParpadeante = Color.red; // Color rojo para el parpadeo
     public int parpadeos = 2; // Cantidad de veces que parpadeará el mensaje
     public Player playerScript; // Referencia al script del jugador
+    public AudioSource audioSource; // Referencia al componente AudioSource
+    public AudioClip compraSound; // Sonido de compra
+    public AudioClip sinMonedasSound; // Sonido de falta de monedas
 
     private bool puedeCorrer = true; // Indica si el jugador puede correr al esprintar
 
@@ -47,6 +50,11 @@ public class Fox : MonoBehaviour
             if (playerScript != null && playerScript.totalCoinsCollected >= costoMonedas)
             {
                 Debug.Log("Activando el nuevo objeto.");
+                // Reproducir el sonido de compra
+                if (audioSource != null && compraSound != null)
+                {
+                    audioSource.PlayOneShot(compraSound);
+                }
                 // Restar las monedas necesarias
                 playerScript.totalCoinsCollected -= costoMonedas;
                 playerScript.UpdateCoinCounter(); // Actualizar el contador de monedas del jugador
@@ -63,6 +71,11 @@ public class Fox : MonoBehaviour
             else
             {
                 StartCoroutine(ParpadearMensajeRojo(mensajeTextMeshF));
+                // Reproducir el sonido de falta de monedas
+                if (audioSource != null && sinMonedasSound != null)
+                {
+                    audioSource.PlayOneShot(sinMonedasSound);
+                }
             }
         }
 
@@ -80,7 +93,6 @@ public class Fox : MonoBehaviour
             // Verificar si el objeto intersectado es el objeto nuevo
             if (hit.collider.gameObject == gameObject)
             {
-                Debug.Log("La cámara del jugador está mirando el objeto nuevo.");
                 // Mostrar el HUD del objeto nuevo si está mirando hacia él
                 hudObjeto.SetActive(true);
             }
