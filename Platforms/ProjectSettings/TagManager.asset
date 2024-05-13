@@ -9,6 +9,17 @@ TagManager:
   - Enemy
   - Tower
   - TowerHealthBar
+  - Boss
+  - Runner
+  - Slime
+  - Tank
+  - GoldCoin
+  - SilverCoin
+  - BronzeCoin
+  - CoinContainer
+  - Bullet
+  - Missile
+  - Shop
   layers:
   - Default
   - TransparentFX
