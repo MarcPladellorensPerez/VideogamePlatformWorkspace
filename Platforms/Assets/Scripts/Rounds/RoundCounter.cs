@@ -17,7 +17,7 @@ public class RoundCounter : MonoBehaviour
     void Update()
     {
         // Verificar si han pasado 3 minutos desde la última actualización de ronda
-        if (Time.time - lastRoundTime >= 10)
+        if (Time.time - lastRoundTime >= 180)
         {
             // Incrementar la ronda y actualizar el texto de la ronda
             round++;

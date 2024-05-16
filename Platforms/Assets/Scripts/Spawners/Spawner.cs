@@ -22,6 +22,8 @@ public class Spawner : MonoBehaviour
     public Transform container; // Referencia al objeto contenedor donde se guardarán los prefabs spawnizados
     public TextMeshProUGUI roundText; // Referencia al TextMeshPro que muestra el número de ronda
 
+    private bool[] monsterSpawnedForRound = new bool[10]; // Array para marcar si se ha generado un enemigo para cada ronda
+
     float timer;
 
     void Start()
@@ -48,6 +50,14 @@ public class Spawner : MonoBehaviour
     void SpawnMonster()
     {
         int currentRound = GetCurrentRound();
+        
+        // Verificar si es la ronda 10 y si ya se ha generado un enemigo en esta ronda
+        if (currentRound == 10 && monsterSpawnedForRound[9])
+        {
+            // Si ya se ha generado un enemigo en la ronda 10, no hacer nada más
+            return;
+        }
+        
         List<GameObject> selectedMonsterPrefabs = GetSelectedMonsterPrefabs(currentRound);
 
         if (selectedMonsterPrefabs.Count == 0)
@@ -82,6 +92,12 @@ public class Spawner : MonoBehaviour
         else
         {
             Debug.LogWarning("El prefab de monstruo no tiene el componente MoverHaciaObjetivo.");
+        }
+
+        // Marcar que se ha generado un enemigo para la ronda actual
+        if (currentRound == 10)
+        {
+            monsterSpawnedForRound[9] = true;
         }
     }
 
