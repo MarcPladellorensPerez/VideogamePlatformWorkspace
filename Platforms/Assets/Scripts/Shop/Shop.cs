@@ -43,7 +43,6 @@ public class Shop : MonoBehaviour
         {
             if (playerScript != null && playerScript.totalCoinsCollected >= 10)
             {
-                Debug.Log("Activando la SingleTurret.");
                 // Reproducir el sonido de compra
                 if (audioSource != null && compraSound != null)
                 {
@@ -54,7 +53,6 @@ public class Shop : MonoBehaviour
                 playerScript.UpdateCoinCounter(); // Actualizar el contador de monedas del jugador
                 // Activar la SingleTurret
                 SingleTurret.SetActive(true);
-                Debug.Log("Se ha activado la SingleTurret.");
             }
             else
             {
@@ -72,7 +70,6 @@ public class Shop : MonoBehaviour
         {
             if (playerScript != null && playerScript.totalCoinsCollected >= 40)
             {
-                Debug.Log("Activando la DoubleTurret.");
                 // Reproducir el sonido de compra
                 if (audioSource != null && compraSound != null)
                 {
@@ -83,7 +80,6 @@ public class Shop : MonoBehaviour
                 playerScript.UpdateCoinCounter(); // Actualizar el contador de monedas del jugador
                 // Activar la DoubleTurret
                 DoubleTurret.SetActive(true);
-                Debug.Log("Se ha activado la DoubleTurret.");
             }
             else
             {
@@ -117,7 +113,6 @@ public class Shop : MonoBehaviour
             // Verificar si el objeto intersectado es el bloque
             if (hit.collider.gameObject == gameObject)
             {
-                Debug.Log("La cámara del jugador está mirando el bloque.");
                 // Mostrar el HUD del bloque si está mirando hacia él y no está desactivado permanentemente
                 if (!desactivadoPermanentemente)
                 {

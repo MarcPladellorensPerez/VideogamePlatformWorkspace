@@ -578,12 +578,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 2
-  waypointObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &3661180298783938478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,8 +592,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 4099571666619651612}
   destroyedPrefab: {fileID: 3883208214511784116, guid: 2c864e3d47f1c4f4588936ea1c1436fd, type: 3}
+  containerTag: CoinContainer
   spawnOffset: 1
-  MaxHp: 20
+  baseHp: 25
   Hp: 0
 --- !u!4 &807290072118919784 stripped
 Transform:

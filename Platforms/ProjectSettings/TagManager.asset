@@ -20,6 +20,7 @@ TagManager:
   - Bullet
   - Missile
   - Shop
+  - Spawner
   layers:
   - Default
   - TransparentFX

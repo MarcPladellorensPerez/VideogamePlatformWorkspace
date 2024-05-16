@@ -538,8 +538,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 5694779724432499328}
   destroyedPrefab: {fileID: 3883208214511784116, guid: 2c864e3d47f1c4f4588936ea1c1436fd, type: 3}
+  containerTag: CoinContainer
   spawnOffset: 1
-  MaxHp: 20
+  baseHp: 40
   Hp: 0
 --- !u!114 &814791082719674092
 MonoBehaviour:
@@ -554,12 +555,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 2
-  waypointObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &5009134142550449109
 GameObject:
   m_ObjectHideFlags: 0
