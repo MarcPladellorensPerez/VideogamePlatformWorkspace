@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
 
     public GameObject vfxPrefab; // Prefab del efecto VFX
     public float vfxDuration = 2f; // Duración del VFX en segundos
+    public AudioClip vfxSound; // Sonido del VFX
+    public float vfxCooldown = 2f; // Tiempo de espera entre lanzamientos del VFX
+
+    public Transform vfxContainer; // Contenedor de VFX
 
     private Animator anim;
     public int totalCoinsCollected = 0;
@@ -25,6 +29,7 @@ public class Player : MonoBehaviour
     private Fox FoxScript;
 
     private bool isRunning = false;
+    private float lastVfxTime = -Mathf.Infinity; // Tiempo del último lanzamiento del VFX
 
     void Awake()
     {
@@ -127,12 +132,30 @@ public class Player : MonoBehaviour
 
     private void ShootVFX()
     {
-        if (vfxPrefab != null)
+        // Comprobar si ha pasado suficiente tiempo desde el último lanzamiento del VFX
+        if (Time.time - lastVfxTime >= vfxCooldown)
         {
-            // Instanciar el VFX en la posición del jugador mirando en la dirección del jugador
-            GameObject vfxInstance = Instantiate(vfxPrefab, player.position + player.forward, player.rotation);
-            // Destruir el VFX después de la duración especificada
-            Destroy(vfxInstance, vfxDuration);
+            if (vfxPrefab != null)
+            {
+                // Instanciar el VFX en la posición del jugador mirando en la dirección del jugador
+                GameObject vfxInstance = Instantiate(vfxPrefab, player.position + player.forward, player.rotation);
+                // Establecer el VFX como hijo del contenedor
+                if (vfxContainer != null)
+                {
+                    vfxInstance.transform.SetParent(vfxContainer);
+                }
+                // Destruir el VFX después de la duración especificada
+                Destroy(vfxInstance, vfxDuration);
+
+                // Reproducir el sonido del VFX
+                if (audioSource != null && vfxSound != null)
+                {
+                    audioSource.PlayOneShot(vfxSound);
+                }
+
+                // Actualizar el tiempo del último lanzamiento del VFX
+                lastVfxTime = Time.time;
+            }
         }
     }
 
