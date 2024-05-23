@@ -21,6 +21,7 @@ TagManager:
   - Missile
   - Shop
   - Spawner
+  - Ability
   layers:
   - Default
   - TransparentFX

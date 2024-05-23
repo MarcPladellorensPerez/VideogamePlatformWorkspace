@@ -44,6 +44,11 @@ public class EnemyHealth : MonoBehaviour
             Hp -= 5;
             healthBar.setHealth(Hp);
         }
+        else if (other.gameObject.CompareTag("Ability"))
+        {
+            Hp -= 7;
+            healthBar.setHealth(Hp);
+        }
     }
 
     private void DestroyEnemy()
