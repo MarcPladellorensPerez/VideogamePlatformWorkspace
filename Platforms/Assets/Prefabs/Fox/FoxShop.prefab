@@ -1172,6 +1172,7 @@ MonoBehaviour:
   playerScript: {fileID: 0}
   audioSource: {fileID: 472419978883654208}
   compraSound: {fileID: 8300000, guid: ddedd421d896c6d48b1b6f72aa0453e6, type: 3}
+  sinMonedasSound: {fileID: 0}
 --- !u!82 &967243782013006968
 AudioSource:
   m_ObjectHideFlags: 0

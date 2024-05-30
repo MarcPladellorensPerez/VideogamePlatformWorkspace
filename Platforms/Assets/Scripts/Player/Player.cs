@@ -5,23 +5,31 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
-    public Transform player; 
+    public Transform player;
     public float moveSpeed = 1f;
     public int speedMult = 1;
     public int moveHorizontal;
     public int moveVertical;
-    public TextMeshProUGUI coinCounter; 
-    public AudioSource audioSource; // Referencia al componente AudioSource
-    public AudioClip movimientoSound; // Sonido de movimiento
-    public AudioClip correrSound; // Sonido de correr (run)
+    public TextMeshProUGUI coinCounter;
+    public AudioSource audioSource;
+    public AudioClip movimientoSound;
+    public AudioClip correrSound;
+
+    public GameObject vfxPrefab; // Prefab del efecto VFX
+    public float vfxDuration = 2f; // Duración del VFX en segundos
+    public AudioClip vfxSound; // Sonido del VFX
+    public float vfxCooldown = 2f; // Tiempo de espera entre lanzamientos del VFX
+
+    public Transform vfxContainer; // Contenedor de VFX
 
     private Animator anim;
     public int totalCoinsCollected = 0;
 
-    private Shop ShopScript; // Referencia al script Shop
-    private Fox FoxScript; // Referencia al script FoxHUD
+    private Shop ShopScript;
+    private Fox FoxScript;
 
-    private bool isRunning = false; // Indica si el jugador está corriendo
+    private bool isRunning = false;
+    private float lastVfxTime = -Mathf.Infinity; // Tiempo del último lanzamiento del VFX
 
     void Awake()
     {
@@ -30,15 +38,12 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        // Obtener la referencia al script Shop
         ShopScript = FindObjectOfType<Shop>();
-        // Obtener la referencia al script FoxHUD
         FoxScript = FindObjectOfType<Fox>();
     }
 
     void Update()
     {
-        // Reproducir el sonido de movimiento si el jugador se está moviendo
         if (moveHorizontal != 0 || moveVertical != 0)
         {
             if (audioSource != null && movimientoSound != null && !audioSource.isPlaying)
@@ -50,7 +55,6 @@ public class Player : MonoBehaviour
         }
         else
         {
-            // Detener el sonido de movimiento si el jugador deja de moverse
             if (audioSource != null && audioSource.isPlaying)
             {
                 audioSource.Stop();
@@ -63,13 +67,11 @@ public class Player : MonoBehaviour
         Vector3 moveDirection = new Vector3(moveHorizontal, 0.0f, moveVertical);
         player.Translate(moveDirection * Time.deltaTime * moveSpeed * speedMult);
 
-        // Verificar si el jugador puede correr al esprintar
         bool puedeCorrer = FoxScript == null || FoxScript.objetoNuevo.activeSelf;
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && puedeCorrer)
         {
             moveVertical = 2;
-            // Si el jugador no estaba corriendo previamente, reproducir el sonido de correr
             if (!isRunning && audioSource != null && correrSound != null)
             {
                 if (audioSource.clip != correrSound || !audioSource.isPlaying)
@@ -84,7 +86,6 @@ public class Player : MonoBehaviour
         else if (Input.GetKey(KeyCode.W))
         {
             moveVertical = 1;
-            // Si el jugador estaba corriendo previamente, detener el sonido de correr
             if (isRunning && audioSource != null && audioSource.clip == correrSound && audioSource.isPlaying)
             {
                 audioSource.Stop();
@@ -98,7 +99,6 @@ public class Player : MonoBehaviour
         else
         {
             moveVertical = 0;
-            // Si el jugador deja de correr, detener el sonido de correr
             if (isRunning && audioSource != null && audioSource.clip == correrSound && audioSource.isPlaying)
             {
                 audioSource.Stop();
@@ -123,15 +123,48 @@ public class Player : MonoBehaviour
         {
             anim.SetInteger("Attack", anim.GetInteger("Attack") + 1);
         }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            ShootVFX();
+        }
     }
 
-    // Método para recolectar monedas
+    private void ShootVFX()
+    {
+        // Comprobar si ha pasado suficiente tiempo desde el último lanzamiento del VFX
+        if (Time.time - lastVfxTime >= vfxCooldown)
+        {
+            if (vfxPrefab != null)
+            {
+                // Instanciar el VFX en la posición del jugador mirando en la dirección del jugador
+                GameObject vfxInstance = Instantiate(vfxPrefab, player.position + player.forward, player.rotation);
+                // Establecer el VFX como hijo del contenedor
+                if (vfxContainer != null)
+                {
+                    vfxInstance.transform.SetParent(vfxContainer);
+                }
+                // Destruir el VFX después de la duración especificada
+                Destroy(vfxInstance, vfxDuration);
+
+                // Reproducir el sonido del VFX
+                if (audioSource != null && vfxSound != null)
+                {
+                    audioSource.PlayOneShot(vfxSound);
+                }
+
+                // Actualizar el tiempo del último lanzamiento del VFX
+                lastVfxTime = Time.time;
+            }
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("GoldCoin") || other.gameObject.CompareTag("SilverCoin") || other.gameObject.CompareTag("BronzeCoin"))
+        if (other.gameObject.CompareTag("GoldCoin") || other.gameObject.CompareTag("SilverCoin") || other.gameObject.CompareTag("BronzeCoin"))
         {
             Coin coinScript = other.gameObject.GetComponent<Coin>();
-            if(coinScript != null && !coinScript.IsCollected())
+            if (coinScript != null && !coinScript.IsCollected())
             {
                 totalCoinsCollected += coinScript.GetCoinValue();
                 coinScript.Collect();
@@ -140,7 +173,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Método para actualizar el contador de monedas en el HUD
     public void UpdateCoinCounter()
     {
         coinCounter.text = "Coins: " + totalCoinsCollected;

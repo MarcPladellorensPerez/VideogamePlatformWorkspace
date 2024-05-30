@@ -49,7 +49,6 @@ public class Fox : MonoBehaviour
         {
             if (playerScript != null && playerScript.totalCoinsCollected >= costoMonedas)
             {
-                Debug.Log("Activando el nuevo objeto.");
                 // Reproducir el sonido de compra
                 if (audioSource != null && compraSound != null)
                 {
@@ -60,12 +59,10 @@ public class Fox : MonoBehaviour
                 playerScript.UpdateCoinCounter(); // Actualizar el contador de monedas del jugador
                 // Activar el nuevo objeto
                 objetoNuevo.SetActive(true);
-                Debug.Log("Se ha activado el nuevo objeto.");
                 // Desactivar el otro objeto si está activo
                 if (objetoADesactivar != null && objetoADesactivar.activeSelf)
                 {
                     objetoADesactivar.SetActive(false);
-                    Debug.Log("Se ha desactivado el objeto a desactivar.");
                 }
             }
             else

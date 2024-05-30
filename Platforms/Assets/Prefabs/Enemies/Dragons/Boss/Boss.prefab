@@ -2632,7 +2632,7 @@ MonoBehaviour:
   destroyedPrefab: {fileID: 0}
   containerTag: CoinContainer
   spawnOffset: 0.1
-  MaxHp: 150
+  baseHp: 500
   Hp: 0
 --- !u!114 &8692590603938124559
 MonoBehaviour:

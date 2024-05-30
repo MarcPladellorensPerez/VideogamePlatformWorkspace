@@ -1616,8 +1616,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2911230238251156215}
   destroyedPrefab: {fileID: 5969640020706160951, guid: 47855fcb2cae1fa4fa67dd77f96b2de9, type: 3}
+  containerTag: CoinContainer
   spawnOffset: 1
-  MaxHp: 40
+  baseHp: 30
   Hp: 0
 --- !u!114 &5654937764325859989
 MonoBehaviour:

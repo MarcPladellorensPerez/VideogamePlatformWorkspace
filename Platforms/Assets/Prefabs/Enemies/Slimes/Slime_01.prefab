@@ -632,7 +632,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 2
-  puntosDeCamino: []
 --- !u!65 &8972813547765735479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -695,8 +694,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2649588144959478109}
   destroyedPrefab: {fileID: 3883208214511784116, guid: 2c864e3d47f1c4f4588936ea1c1436fd, type: 3}
+  containerTag: CoinContainer
   spawnOffset: 1
-  MaxHp: 20
+  baseHp: 25
   Hp: 0
 --- !u!1 &7922181130732285353
 GameObject:

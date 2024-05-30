@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class EnemyHealthBar : MonoBehaviour
 {
-
     public Slider Healthbar;
 
     public Camera Camera;
@@ -19,6 +18,7 @@ public class EnemyHealthBar : MonoBehaviour
     {
         transform.LookAt(Camera.main.transform.position);
     }
+
     public void SetMaxHealth(int maxHealth)
     {
         Healthbar.maxValue = maxHealth;
@@ -28,5 +28,6 @@ public class EnemyHealthBar : MonoBehaviour
     public void setHealth(int health)
     {
         Healthbar.value = health;
+        Debug.Log("Vida del enemigo: " + health); // Debug para mostrar la vida del enemigo
     }
 }

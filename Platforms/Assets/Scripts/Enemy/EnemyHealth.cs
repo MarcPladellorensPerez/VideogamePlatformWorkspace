@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,23 +8,23 @@ public class EnemyHealth : MonoBehaviour
     public string containerTag = "CoinContainer"; // Etiqueta del contenedor
     public float spawnOffset = 0.1f; // La cantidad de unidades que el prefab estará por encima del enemigo
 
-    public int MaxHp = 100;
+    public int baseHp = 100; // Vida base de los enemigos
     public int Hp;
 
-    // Start is called before the first frame update
     void Start()
     {
-        Hp = MaxHp;
-        healthBar.SetMaxHealth(MaxHp);
+        AdjustEnemyHealth(); // Ajustar la vida del enemigo al inicio
+        healthBar.SetMaxHealth(Hp);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Hp <= 0)
         {
             DestroyEnemy();
         }
+        // Debug para mostrar la vida del enemigo cada vez que se actualiza
+        Debug.Log("Vida del enemigo: " + Hp);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,13 +33,20 @@ public class EnemyHealth : MonoBehaviour
         {
             Hp -= 10;
             healthBar.setHealth(Hp);
-        } else if (other.gameObject.CompareTag("Bullet"))
+        }
+        else if (other.gameObject.CompareTag("Bullet"))
         {
             Hp -= 2;
             healthBar.setHealth(Hp);
-        }else if (other.gameObject.CompareTag("Missile"))
+        }
+        else if (other.gameObject.CompareTag("Missile"))
         {
             Hp -= 5;
+            healthBar.setHealth(Hp);
+        }
+        else if (other.gameObject.CompareTag("Ability"))
+        {
+            Hp -= 7;
             healthBar.setHealth(Hp);
         }
     }
@@ -63,5 +68,28 @@ public class EnemyHealth : MonoBehaviour
         }
         // Destruir el enemigo actual
         Destroy(gameObject);
+    }
+
+    // Método para ajustar la vida de los enemigos según la ronda
+    public void AdjustEnemyHealth()
+    {
+        int currentRound = GetCurrentRound();
+        Hp = baseHp + ((currentRound - 1) * 5); // Incrementar la vida según la ronda
+    }
+
+    // Método para obtener la ronda actual
+    int GetCurrentRound()
+    {
+        GameObject spawnerObject = GameObject.FindWithTag("Spawner"); // Encontrar el objeto del Spawner por etiqueta
+        if (spawnerObject != null)
+        {
+            Spawner spawner = spawnerObject.GetComponent<Spawner>();
+            return spawner.GetCurrentRound();
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró el objeto del Spawner.");
+            return 1; // Devolver 1 si no se encuentra el Spawner
+        }
     }
 }
