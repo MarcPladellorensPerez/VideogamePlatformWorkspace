@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
 {
+    public bool paused = false;
+
     public Transform player; // Player's transform
     public float distance = 2.0f; // Distance from the player
     public float cameraHeight = 1.0f; // Height of the camera above the player
@@ -18,6 +20,8 @@ public class PlayerCam : MonoBehaviour
 
     private void Update()
     {
+        if (paused) return;
+
         // Get mouse input
         float mouseX = Input.GetAxis("Mouse X") * sensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
