@@ -14,12 +14,12 @@ public class MainMenuManager : MonoBehaviour
     [Header("Volume")]
     [SerializeField] private TMP_Text volumeTextValue = null;
     [SerializeField] private Slider volumeSlider = null;
-    [SerializeField] private float defaultVolume = 100.0f; // Changed to 100
+    [SerializeField] private int defaultVolume = 100; // Changed to 100
 
     [Header("Graphics")]
     [SerializeField] private Slider brightnessSlider = null;
     [SerializeField] private TMP_Text brightnessTextValue = null;
-    [SerializeField] private float defaultBrightness = 100.0f; // Changed to 100
+    [SerializeField] private int defaultBrightness = 100; // Changed to 100
 
     [Space(10)]
     [SerializeField] private TMP_Dropdown qualityDropdown;
@@ -115,8 +115,8 @@ public class MainMenuManager : MonoBehaviour
 
     public void Apply()
     {
-        PlayerPrefs.SetFloat("Volume", AudioListener.volume * 100f); // Save as 0 to 100
-        PlayerPrefs.SetFloat("masterBrightness", _brightnessLevel * 100f); // Save as 0 to 100
+        PlayerPrefs.SetFloat("Volume", AudioListener.volume * 100); // Save as 0 to 100
+        PlayerPrefs.SetFloat("masterBrightness", _brightnessLevel * 100); // Save as 0 to 100
 
         PlayerPrefs.SetInt("masterQuality", _qualityLevel);
         QualitySettings.SetQualityLevel(_qualityLevel);
@@ -148,7 +148,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void ResetAudio()
     {
-        AudioListener.volume = defaultVolume / 100f; // Convert to 0 to 1 range
+        AudioListener.volume = defaultVolume / 100; // Convert to 0 to 1 range
         volumeSlider.value = defaultVolume;
         volumeTextValue.text = Mathf.RoundToInt(defaultVolume).ToString(); // Show 0 to 100
 

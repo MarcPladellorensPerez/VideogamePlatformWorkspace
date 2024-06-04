@@ -132,13 +132,13 @@ public class Player : MonoBehaviour
             }
         }
 
-        while (swordCollider.enabled == true)
+        if (swordCollider.enabled == true)
         {
             attackTimer += Time.deltaTime;
 
-            if (attackTimer >= 1)
+            if (attackTimer >= 0.533)
             {
-                //swordCollider.enabled = false;
+                swordCollider.enabled = false;
                 attackTimer = 0;
             }
         }
