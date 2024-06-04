@@ -561,7 +561,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6508871864379605767}
-  - component: {fileID: 7980235412407262282}
   m_Layer: 0
   m_Name: weapon_r
   m_TagString: Weapon
@@ -585,28 +584,6 @@ Transform:
   - {fileID: 8007022423781019756}
   m_Father: {fileID: 2453676338479414451}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &7980235412407262282
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150964035454596192}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4692214948189147205, guid: de392f919a34e4e4c94a6e77ef08a22d, type: 3}
 --- !u!1 &1241696477704116617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2502,7 +2479,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   moveSpeed: 2
-  speedMult: 1
+  moveHorizontal: 0
+  moveVertical: 0
+  coinCounter: {fileID: 0}
+  audioSource: {fileID: 0}
+  movimientoSound: {fileID: 0}
+  correrSound: {fileID: 0}
+  vfxPrefab: {fileID: 0}
+  vfxDuration: 2
+  vfxSound: {fileID: 0}
+  vfxCooldown: 2
+  vfxContainer: {fileID: 0}
+  totalCoinsCollected: 0
 --- !u!1 &8206070634150816031
 GameObject:
   m_ObjectHideFlags: 0

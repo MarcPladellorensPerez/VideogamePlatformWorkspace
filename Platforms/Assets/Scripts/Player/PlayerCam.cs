@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
 {
+    public bool paused = false;
+
     public Transform player; // Player's transform
     public float minDistance = 1.0f; // Mínima distancia desde el jugador
     public float maxDistance = 5.0f; // Máxima distancia desde el jugador
@@ -25,6 +27,8 @@ public class PlayerCam : MonoBehaviour
 
     private void Update()
     {
+        if (paused) return;
+
         // Obtener la entrada del ratón
         float mouseX = Input.GetAxis("Mouse X") * sensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity;

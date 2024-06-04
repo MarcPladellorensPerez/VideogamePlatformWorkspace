@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
 {
     public Transform player;
     public float moveSpeed = 1f;
-    public int speedMult = 1;
     public int moveHorizontal;
     public int moveVertical;
     public TextMeshProUGUI coinCounter;
@@ -23,6 +22,8 @@ public class Player : MonoBehaviour
     public Transform vfxContainer; // Contenedor de VFX
 
     private Animator anim;
+    public BoxCollider swordCollider;
+    private float attackTimer = 0;
     public int totalCoinsCollected = 0;
 
     private Shop ShopScript;
@@ -38,6 +39,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        swordCollider = GameObject.FindWithTag("Weapon").GetComponent<BoxCollider>();
+        swordCollider.enabled = false;
         ShopScript = FindObjectOfType<Shop>();
         FoxScript = FindObjectOfType<Fox>();
     }
@@ -65,7 +68,7 @@ public class Player : MonoBehaviour
         anim.SetFloat("VelX", moveHorizontal);
 
         Vector3 moveDirection = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        player.Translate(moveDirection * Time.deltaTime * moveSpeed * speedMult);
+        player.Translate(moveDirection * Time.deltaTime * moveSpeed);
 
         bool puedeCorrer = FoxScript == null || FoxScript.objetoNuevo.activeSelf;
 
@@ -121,7 +124,23 @@ public class Player : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            anim.SetInteger("Attack", anim.GetInteger("Attack") + 1);
+            if (moveVertical <= 1)
+            {
+                swordCollider.enabled = true;
+                anim.SetInteger("AttackNum", Random.Range(1, 4));
+                anim.SetTrigger("Attack");
+            }
+        }
+
+        while (swordCollider.enabled == true)
+        {
+            attackTimer += Time.deltaTime;
+
+            if (attackTimer >= 1)
+            {
+                //swordCollider.enabled = false;
+                attackTimer = 0;
+            }
         }
 
         if (Input.GetMouseButtonDown(1))
